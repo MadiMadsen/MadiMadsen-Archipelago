@@ -26,8 +26,8 @@ def create_regions(multiworld: MultiWorld, player: int, locations: Tuple[Locatio
             regions.append(create_region(multiworld, player, locations_per_region, location_cache, region_name))
         multiworld.regions += regions
 
-        connect(multiworld, player, names, 'Menu', 'Dark Whispers')
-        connect(multiworld, player, names, 'Dark Whispers' 'Ghosts in the Fog',
+        connect(multiworld, player, names, 'Menu', 'Dark Whispers'),
+        connect(multiworld, player, names, 'Dark Whispers', 'Ghosts in the Fog',
                 lambda state: state.has("Beat Dark Whispers", player)),
         connect(multiworld, player, names, 'Ghosts in the Fog', 'Evil Awoken',
                 lambda state: state.has("Beat Ghosts in the Fog", player)),
@@ -41,10 +41,10 @@ def create_regions(multiworld: MultiWorld, player: int, locations: Tuple[Locatio
                 lambda state: state.has("Beat The Spear of Adun", player)),
         connect(multiworld, player, names, 'Sky Shield', 'Brothers in Arms',
                 lambda state: state.has("Beat Sky Shield", player)),
-        connect(multiworld, player, names, 'The Spear of Adun', 'Amons Reach',
+        connect(multiworld, player, names, 'The Spear of Adun', 'Amon(s) Reach',
                 lambda state: state.has("Beat The Spear of Adun", player)),
-        connect(multiworld, player, names, 'Amons Reach', 'Last Stand',
-                lambda state: state.has("Beat Amon's Reach", player)),
+        connect(multiworld, player, names, 'Amon(s) Reach', 'Last Stand',
+                lambda state: state.has("Beat Amon(s) Reach", player)),
         connect(multiworld, player, names, 'Brothers in Arms', 'Forbidden Weapon',
                 lambda state: state.has("Beat Brothers in Arms", player)),
         connect(multiworld, player, names, 'Last Stand', 'Forbidden Weapon',
@@ -52,7 +52,7 @@ def create_regions(multiworld: MultiWorld, player: int, locations: Tuple[Locatio
         connect(multiworld, player, names, 'Forbidden Weapon', 'Temple of Unification',
                 lambda state: state.has("Beat Brothers in Arms", player) and
                               state.has("Beat Last Stand", player) and
-                              state.has("Beat Forbidden Weapon",)),
+                              state.has("Beat Forbidden Weapon", player)),
         connect(multiworld, player, names, 'Temple of Unification', 'The Infinite Cycle',
                 lambda state: state.has("Beat Temple of Unification", player)),
         connect(multiworld, player, names, 'The Infinite Cycle', 'Harbinger of Oblivion',
@@ -62,19 +62,19 @@ def create_regions(multiworld: MultiWorld, player: int, locations: Tuple[Locatio
         connect(multiworld, player, names, 'Unsealing the Past', 'Purification',
                 lambda state: state.has("Beat Unsealing the Past", player)),
         connect(multiworld, player, names, 'Harbinger of Oblivion', 'Steps of the Rite',
-                lambda state: state.has("Harbinger of Oblivion", player)),
+                lambda state: state.has("Beat Harbinger of Oblivion", player)),
         connect(multiworld, player, names, 'Steps of the Rite', 'Rak Shir',
                 lambda state: state.has("Beat Steps of the Rite", player)),
-        connect(multiworld, player, names, 'Purification', 'Templars Charge',
+        connect(multiworld, player, names, 'Purification', 'Templar(s) Charge',
                 lambda state: state.has("Beat Purification", player)),
-        connect(multiworld, player, names, 'Rak Shir', 'Templars Charge',
-                lambda state: state.has("Beat Rak'Shir", player)),
-        connect(multiworld, player, names, 'Templars Charge', 'Templars Return',
+        connect(multiworld, player, names, 'Rak Shir', 'Templar(s) Charge',
+                lambda state: state.has("Beat Rak Shir", player)),
+        connect(multiworld, player, names, 'Templar(s) Charge', 'Templar(s) Return',
                 lambda state: state.has("Beat Purification", player) and
                               state.has("Beat Rak Shir", player) and
-                              state.has("Beat Templar's Charge", player)),
-        connect(multiworld, player, names, 'Templars Return', 'The Host',
-                lambda state: state.has("Beat Templar's Return", player)),
+                              state.has("Beat Templar(s) Charge", player)),
+        connect(multiworld, player, names, 'Templar(s) Return', 'The Host',
+                lambda state: state.has("Beat Templar(s) Return", player)),
         connect(multiworld, player, names, 'The Host', 'Salvation',
                 lambda state: state.has("Beat The Host", player)),
 

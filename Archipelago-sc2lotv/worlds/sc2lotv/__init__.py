@@ -112,8 +112,8 @@ def get_excluded_items(multiworld: MultiWorld, player: int) -> Set[str]:
         excluded_items.add(item.name)
     locked_items: Set[str] = set(get_option_value(multiworld, player, 'locked_items'))
     # pick a random mutation & strain for each unit and exclude the rest
-    mutation_count = get_option_value(multiworld, player, "include_mutations")
-    strain_count = get_option_value(multiworld, player, "include_strains")
+    #mutation_count = get_option_value(multiworld, player, "include_mutations")
+    #strain_count = get_option_value(multiworld, player, "include_strains")
 
     def smart_exclude(item_choices: Set[str], choices_to_keep: int):
         expected_choices = len(item_choices)
@@ -128,13 +128,13 @@ def get_excluded_items(multiworld: MultiWorld, player: int) -> Set[str]:
         if exclude_amount > 0:
             excluded_items.update(multiworld.random.sample(candidates, exclude_amount))
 
-    for name in UPGRADABLE_ITEMS:
-        mutations = {child_name for child_name, item in item_table.items()
-                   if item.parent_item == name and item.type == "Mutation"}
-        smart_exclude(mutations, mutation_count)
-        strains = {child_name for child_name, item in item_table.items()
-                   if item.parent_item == name and item.type == "Strain" and child_name not in excluded_items}
-        smart_exclude(strains, strain_count)
+    #for name in UPGRADABLE_ITEMS:
+    #    mutations = {child_name for child_name, item in item_table.items()
+    #               if item.parent_item == name and item.type == "Mutation"}
+    #    smart_exclude(mutations, mutation_count)
+    #    strains = {child_name for child_name, item in item_table.items()
+    #               if item.parent_item == name and item.type == "Strain" and child_name not in excluded_items}
+    #    smart_exclude(strains, strain_count)
 
 #    kerriganless = get_option_value(multiworld, player, "kerriganless")
     # no Kerrigan & remove all passives => remove all abilities

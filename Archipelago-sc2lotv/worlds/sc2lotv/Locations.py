@@ -36,7 +36,7 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
     LocationData("Sky Shield", "Sky Shield: Victory", SC2LOTV_LOC_ID_OFFSET + 700,
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
     LocationData("Brothers in Arms", "Brothers in Arms: Victory", SC2LOTV_LOC_ID_OFFSET + 800),
-    LocationData("Amon's Reach", "Amon's Reach: Victory", SC2LOTV_LOC_ID_OFFSET + 900),
+    LocationData("Amon(s) Reach", "Amon(s) Reach: Victory", SC2LOTV_LOC_ID_OFFSET + 900),
     LocationData("Last Stand", "Last Stand: Victory", SC2LOTV_LOC_ID_OFFSET + 1000,
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
     LocationData("Forbidden Weapon", "Forbidden Weapon: Victory", SC2LOTV_LOC_ID_OFFSET + 1100),
@@ -50,15 +50,15 @@ def get_locations(multiworld: Optional[MultiWorld], player: Optional[int]) -> Tu
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
     LocationData("Steps of the Rite", "Steps of the Rite: Victory", SC2LOTV_LOC_ID_OFFSET + 1700,
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
-    LocationData("Rak'Shir", "Rak'Shir: Victory", SC2LOTV_LOC_ID_OFFSET + 1800,
+    LocationData("Rak Shir", "Rak Shir: Victory", SC2LOTV_LOC_ID_OFFSET + 1800,
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
-    LocationData("Templar's Charge", "Templar's Charge: Victory", SC2LOTV_LOC_ID_OFFSET + 1900,
+    LocationData("Templar(s) Charge", "Templar(s) Charge: Victory", SC2LOTV_LOC_ID_OFFSET + 1900,
         lambda state: state._sc2lotv_has_anti_air(multiworld, player)),
-    LocationData("Templar's Return", "Templar's Return: Victory", SC2LOTV_LOC_ID_OFFSET + 2000),
+    LocationData("Templar(s) Return", "Templar(s) Return: Victory", SC2LOTV_LOC_ID_OFFSET + 2000),
     LocationData("The Host", "The Host: Victory", SC2LOTV_LOC_ID_OFFSET + 2100,
         lambda state: state._sc2lotv_has_common_unit(multiworld, player) and
                       state._sc2lotv_has_anti_air(multiworld, player)),
-    LocationData("Salvation", "Dark Whispers: Victory", None,
+    LocationData("Salvation", "Salvation: Victory", None,
         lambda state: state._sc2lotv_has_common_unit(multiworld, player)and
                       state._sc2lotv_has_anti_air(multiworld, player)),
 

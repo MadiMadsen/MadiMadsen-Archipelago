@@ -10,12 +10,12 @@ from enum import IntEnum
 # hard_regions_list = ["Maw of the Void", "Engine of Destruction", "In Utter Darkness", "Gates of Hell",
 #                      "Shatter the Sky"]
 
-no_build_regions_list = ["Evil Awoken", "For Aiur!", "The Infinite Cycle", "Templar's Return"]
+no_build_regions_list = ["Evil Awoken", "For Aiur!", "The Infinite Cycle", "Templar(s) Return"]
 starter_regions_list = ["Dark Whispers", "The Growing Shadow", "The Spear of Adun"]
-easy_regions_list = ["Sky Shield", "Amon's Reach", "Brothers in Arms", "Last Stand"]
+easy_regions_list = ["Sky Shield", "Amon(s) Reach", "Brothers in Arms", "Last Stand"]
 medium_regions_list = ["Ghosts in the Fog", "Forbidden Weapon", "Temple of Unification", "Harbinger of Oblivion",
                        "Unsealing the Past", "Steps of the Rite"]
-hard_regions_list = ["Purification", "Rak'Shir", "Templar's Charge", "The Host"]
+hard_regions_list = ["Purification", "Rak Shir", "Templar(s) Charge", "The Host"]
 
 
 class MissionPools(IntEnum):
@@ -46,28 +46,28 @@ class FillMission(NamedTuple):
 
 
 vanilla_shuffle_order = [
-    FillMission(MissionPools.STARTER, [-1], "Prologue", completion_critical=True),
-    FillMission(MissionPools.EASY, [0], "Prologue", completion_critical=True),
-    FillMission(MissionPools.EASY, [1], "Prologue", completion_critical=True, removal_priority=1),
-    FillMission(MissionPools.EASY, [2], "Aiur", completion_critical=True),
-    FillMission(MissionPools.EASY, [3], "Aiur", completion_critical=True),
-    FillMission(MissionPools.EASY, [4], "Aiur", completion_critical=True, removal_priority=2),
-    FillMission(MissionPools.MEDIUM, [5], "Korhal", completion_critical=True),
-    FillMission(MissionPools.MEDIUM, [6], "Korhal", completion_critical=True, removal_priority=3),
-    FillMission(MissionPools.MEDIUM, [5], "Shakuras", completion_critical=True),
-    FillMission(MissionPools.MEDIUM, [8], "Shakuras", completion_critical=True, removal_priority=4),
-    FillMission(MissionPools.MEDIUM, [7, 9], "Purifier", completion_critical=True, or_requirements=True),
-    FillMission(MissionPools.MEDIUM, [7, 9, 10], "Ulnar", completion_critical=True),
-    FillMission(MissionPools.MEDIUM, [11], "Ulnar", completion_critical=True),
-    FillMission(MissionPools.MEDIUM, [12], "Ulnar", completion_critical=True, removal_priority=5),
-    FillMission(MissionPools.MEDIUM, [13], "Purifier", completion_critical=True),
-    FillMission(MissionPools.HARD, [14], "Purifier", completion_critical=True, removal_priority=6),
-    FillMission(MissionPools.MEDIUM, [13], "Taldarim", completion_critical=True),
-    FillMission(MissionPools.HARD, [16], "Taldarim", completion_critical=True, removal_priority=7),
-    FillMission(MissionPools.HARD, [15, 17], "Moebius", completion_critical=True, or_requirements=True),
-    FillMission(MissionPools.HARD, [15, 17, 18], "Aiur", completion_critical=True),
-    FillMission(MissionPools.HARD, [19], "Aiur", completion_critical=True),
-    FillMission(MissionPools.FINAL, [20], "Aiur", completion_critical=True),
+    FillMission(MissionPools.EASY, [-3], "Prologue", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [-2], "Prologue", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [-1], "Prologue", completion_critical=True, removal_priority=1),
+    FillMission(MissionPools.STARTER, [0], "Aiur", completion_critical=True),
+    FillMission(MissionPools.EASY, [1], "Aiur", completion_critical=True),
+    FillMission(MissionPools.EASY, [2], "Aiur", completion_critical=True, removal_priority=2),
+    FillMission(MissionPools.EASY, [6], "Korhal", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [7], "Korhal", completion_critical=True, removal_priority=3),
+    FillMission(MissionPools.EASY, [6], "Shakuras", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [9], "Shakuras", completion_critical=True, removal_priority=4),
+    FillMission(MissionPools.MEDIUM, [8, 10], "Purifier", completion_critical=True, or_requirements=True),
+    FillMission(MissionPools.MEDIUM, [8, 10, 11], "Ulnar", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [12], "Ulnar", completion_critical=True),
+    FillMission(MissionPools.MEDIUM, [13], "Ulnar", completion_critical=True, removal_priority=5),
+    FillMission(MissionPools.MEDIUM, [14], "Purifier", completion_critical=True),
+    FillMission(MissionPools.HARD, [15], "Purifier", completion_critical=True, removal_priority=6),
+    FillMission(MissionPools.MEDIUM, [14], "Taldarim", completion_critical=True),
+    FillMission(MissionPools.HARD, [17], "Taldarim", completion_critical=True, removal_priority=7),
+    FillMission(MissionPools.HARD, [16, 18], "Moebius", completion_critical=True, or_requirements=True),
+    FillMission(MissionPools.HARD, [16, 18, 19], "Aiur", completion_critical=True),
+    FillMission(MissionPools.HARD, [20], "Aiur", completion_critical=True),
+    FillMission(MissionPools.FINAL, [21], "Aiur", completion_critical=True),
 
     #    FillMission(MissionPools.STARTER, [-1], "Umoja", completion_critical=True),
     #    FillMission(MissionPools.EASY, [0], "Umoja", completion_critical=True),
@@ -231,14 +231,14 @@ mission_orders = [vanilla_shuffle_order, vanilla_shuffle_order, mini_campaign_or
 vanilla_mission_req_table = {
 
     "Dark Whispers": MissionInfo(1, [], "Prologue", completion_critical=True),
-    "Ghost in the Fog": MissionInfo(2, [1], "Prologue", completion_critical=True),
+    "Ghosts in the Fog": MissionInfo(2, [1], "Prologue", completion_critical=True),
     "Evil Awoken": MissionInfo(3, [2], "Prologue", completion_critical=True),
-    "For Aiur!": MissionInfo(4, [3], "Aiur", completion_critical=True),
+    "For Aiur!": MissionInfo(4, [], "Aiur", completion_critical=True),
     "The Growing Shadow": MissionInfo(5, [4], "Aiur", completion_critical=True),
     "The Spear of Adun": MissionInfo(6, [5], "Aiur", completion_critical=True),
     "Sky Shield": MissionInfo(7, [6], "Korhal", completion_critical=True),
     "Brothers in Arms": MissionInfo(8, [7], "Korhal", completion_critical=True),
-    "Amon's Reach": MissionInfo(9, [6], "Shakuras", completion_critical=True),
+    "Amon(s) Reach": MissionInfo(9, [6], "Shakuras", completion_critical=True),
     "Last Stand": MissionInfo(10, [9], "Shakuras", completion_critical=True),
     "Forbidden Weapon": MissionInfo(11, [8, 10], "Purifier", completion_critical=True, or_requirements=True),
     "Temple of Unification": MissionInfo(12, [11], "Ulnar", completion_critical=True),
@@ -247,9 +247,9 @@ vanilla_mission_req_table = {
     "Unsealing the Past": MissionInfo(15, [14], "Purifier", completion_critical=True),
     "Purification": MissionInfo(16, [15], "Purifier", completion_critical=True),
     "Steps of the Rite": MissionInfo(17, [14], "Taldarim", completion_critical=True),
-    "Rak'Shir": MissionInfo(18, [17], "Taldarim", completion_critical=True),
-    "Templar's Charge": MissionInfo(19, [16, 18], "Moebius", completion_critical=True, or_requirements=True),
-    "Templar's Return": MissionInfo(20, [19], "Aiur", completion_critical=True), #should have and requirment 16,18,19
+    "Rak Shir": MissionInfo(18, [17], "Taldarim", completion_critical=True),
+    "Templar(s) Charge": MissionInfo(19, [16, 18], "Moebius", completion_critical=True, or_requirements=True),
+    "Templar(s) Return": MissionInfo(20, [19], "Aiur", completion_critical=True), #should have and requirment 16,18,19
     "The Host": MissionInfo(21, [20], "Aiur", completion_critical=True),
     "Salvation": MissionInfo(22, [21], "Aiur", completion_critical=True),
 
@@ -336,7 +336,7 @@ starting_mission_locations = {
     "Evil Awoken": "Evil Awoken: Victory",
     "For Aiur!": "For Aiur! Victory",
     "The Infinite Cycle": "The Infinite Cycle: Victory",
-    "Templar's Return": "Templar's Return: Victory",
+    "Templar(s) Return": "Templar(s) Return: Victory",
     "The Growing Shadow": "The Growing Shadow: Victory",
     "The Spear of Adun": "The Spear of Adun: Victory",
 
@@ -375,7 +375,7 @@ starting_mission_locations = {
 # }
 alt_final_mission_locations = {
     "The Host": "The Host: Victory",
-    "Templar's Charge": "Templar's Charge: Victory",
+    "Templar(s) Charge": "Templar(s) Charge: Victory",
     "Purification": "Purification: Victory",
-    "Rak'Shir": "Rak'shir: Vcitory"
+    "Rak Shir": "Rak Shir: Vcitory"
 }

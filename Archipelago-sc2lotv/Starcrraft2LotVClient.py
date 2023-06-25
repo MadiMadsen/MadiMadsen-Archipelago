@@ -176,7 +176,7 @@ class SC2JSONtoTextParser(JSONtoTextParser):
 
 class SC2Context(CommonContext):
     command_processor = StarcraftClientProcessor
-    game = "Starcraft 2 Heart of the Swarm"
+    game = "Starcraft 2 Legacy of the Void"
     items_handling = 0b111
     difficulty = -1
     mission_order = 0
@@ -503,16 +503,16 @@ async def main():
 
 
 maps_table = [
-        "ap_voidprologude01.SC2Map", "ap_voidprologue02.SC2Map", "ap_voidprologue03.SC2Map"
-        "ap_paiur01.SC2Map", "ap_paiur02.SC2Map", "ap_paiur03.SC2Map",
-        "ap_pkorhal01.SC2Map", "ap_pkorhal02.SC2Map",
-        "ap_pshakuras01.SC2Map", "ap_pshakuras02.SC2Map",
-        "ap_ppurifier01.SC2Map",
-        "ap_pulnar01.SC2Map", "ap_pulnar02.SC2Map", "ap_pulnar03.SC2Map",
-        "ap_ppurifier02.SC2Map", "ap_ppurifier03.SC2Map",
-        "ap_ptaldarim01.SC2Map", "ap_ptaldarim02.SC2Map",
+        "ap_voidprologue01", "ap_voidprologue02", "ap_voidprologue03"
+        "ap_paiur01", "ap_paiur02", "ap_paiur03",
+        "ap_pkorhal01", "ap_pkorhal02",
+        "ap_pshakuras01", "ap_pshakuras02",
+        "ap_ppurifier01",
+        "ap_pulnar01", "ap_pulnar02", "ap_pulnar03",
+        "ap_ppurifier02", "ap_ppurifier03",
+        "ap_ptaldarim01", "ap_ptaldarim02",
         "ap_pmoebius01",
-        "ap_paiur04.SC2Map", "ap_paiur05.SC2Map", "ap_paiur06.SC2Map"
+        "ap_paiur04", "ap_paiur05", "ap_paiur06"
 ]
 
 
