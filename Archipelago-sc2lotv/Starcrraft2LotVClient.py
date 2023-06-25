@@ -567,7 +567,7 @@ async def starcraft_launch(ctx: SC2Context, mission_id: int):
     sc2_logger.info(f"Launching {lookup_id_to_mission[mission_id]}. If game does not launch check log file for errors.")
 
     with DllDirectory(None):
-        run_game(sc2.maps.get(maps_table[mission_id - 1]), [Bot(Race.Zerg, ArchipelagoBot(ctx, mission_id),
+        run_game(sc2.maps.get(maps_table[mission_id - 1]), [Bot(Race.Protoss, ArchipelagoBot(ctx, mission_id),
                                                                 name="Archipelago", fullscreen=True)], realtime=True)
 
 
@@ -605,11 +605,11 @@ class ArchipelagoBot(sc2.bot_ai.BotAI):
                 difficulty = calc_difficulty(self.ctx.difficulty_override)
             else:
                 difficulty = calc_difficulty(self.ctx.difficulty)
-            await self.chat_send("ArchipelagoLoad {} {} {} {} {} {} {} {} {} {} {}".format(
-                difficulty,
-                start_items[0], start_items[1], start_items[2], start_items[3], start_items[4],
-                start_items[5], start_items[6], start_items[7], start_items[8],
-                self.ctx.kerriganless))
+      #      await self.chat_send("ArchipelagoLoad {} {} {} {} {} {} {} {} {} {} {}".format(
+      #          difficulty,
+      #          start_items[0], start_items[1], start_items[2], start_items[3], start_items[4],
+      #          start_items[5], start_items[6], start_items[7], start_items[8],
+      #          self.ctx.kerriganless))
             self.last_received_update = len(self.ctx.items_received)
 
         else:
