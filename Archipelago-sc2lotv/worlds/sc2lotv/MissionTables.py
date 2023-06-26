@@ -65,9 +65,9 @@ vanilla_shuffle_order = [
     FillMission(MissionPools.MEDIUM, [14], "Taldarim", completion_critical=True),
     FillMission(MissionPools.HARD, [17], "Taldarim", completion_critical=True, removal_priority=7),
     FillMission(MissionPools.HARD, [16, 18], "Moebius", completion_critical=True, or_requirements=True),
-    FillMission(MissionPools.HARD, [16, 18, 19], "Aiur", completion_critical=True),
-    FillMission(MissionPools.HARD, [20], "Aiur", completion_critical=True),
-    FillMission(MissionPools.FINAL, [21], "Aiur", completion_critical=True),
+    FillMission(MissionPools.HARD, [16, 18, 19], "Aiur Revisit", completion_critical=True),
+    FillMission(MissionPools.HARD, [20], "Aiur Revisit", completion_critical=True),
+    FillMission(MissionPools.FINAL, [21], "Aiur Revisit", completion_critical=True),
 
     #    FillMission(MissionPools.STARTER, [-1], "Umoja", completion_critical=True),
     #    FillMission(MissionPools.EASY, [0], "Umoja", completion_critical=True),
@@ -134,8 +134,8 @@ FillMission(MissionPools.STARTER, [-1], "Prologue", completion_critical=True),
     FillMission(MissionPools.HARD, [8], "Purifer"),
     FillMission(MissionPools.HARD, [10], "Taldarim", number=5),
     FillMission(MissionPools.HARD, [9, 11], "Moebius", or_requirements=True),
-    FillMission(MissionPools.HARD, [9, 11, 12], "Aiur", completion_critical=True, number=8),
-    FillMission(MissionPools.FINAL, [13], "Aiur", completion_critical=True),
+    FillMission(MissionPools.HARD, [9, 11, 12], "Aiur Revisit", completion_critical=True, number=8),
+    FillMission(MissionPools.FINAL, [13], "Aiur Revisit", completion_critical=True),
 
 
     #FillMission(MissionPools.STARTER, [-1], "Umoja", completion_critical=True),
@@ -249,9 +249,9 @@ vanilla_mission_req_table = {
     "Steps of the Rite": MissionInfo(17, [14], "Taldarim", completion_critical=True),
     "Rak Shir": MissionInfo(18, [17], "Taldarim", completion_critical=True),
     "Templar(s) Charge": MissionInfo(19, [16, 18], "Moebius", completion_critical=True, or_requirements=True),
-    "Templar(s) Return": MissionInfo(20, [19], "Aiur", completion_critical=True), #should have and requirment 16,18,19
-    "The Host": MissionInfo(21, [20], "Aiur", completion_critical=True),
-    "Salvation": MissionInfo(22, [21], "Aiur", completion_critical=True),
+    "Templar(s) Return": MissionInfo(20, [19], "Aiur Revisit", completion_critical=True), #should have and requirment 16,18,19
+    "The Host": MissionInfo(21, [20], "Aiur Revisit", completion_critical=True),
+    "Salvation": MissionInfo(22, [21], "Aiur Revisit", completion_critical=True),
 
     # "Lab Rat": MissionInfo(1, [], "Umoja", completion_critical=True),
     # "Back in the Saddle": MissionInfo(2, [1], "Umoja", completion_critical=True),

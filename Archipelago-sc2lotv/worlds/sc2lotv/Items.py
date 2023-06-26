@@ -22,7 +22,7 @@ def get_full_item_list():
     return item_table
 
 
-SC2LOTV_ITEM_ID_OFFSET = 7000
+SC2LOTV_ITEM_ID_OFFSET = 7100
 
 item_table = {
     "Zealot": ItemData(0 + SC2LOTV_ITEM_ID_OFFSET, "Unit", 0, classification=ItemClassification.progression),

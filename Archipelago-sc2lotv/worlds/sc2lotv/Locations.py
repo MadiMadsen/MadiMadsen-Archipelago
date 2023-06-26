@@ -4,7 +4,7 @@ from .Options import get_option_value
 
 from BaseClasses import Location
 
-SC2LOTV_LOC_ID_OFFSET = 7000
+SC2LOTV_LOC_ID_OFFSET = 7100
 
 
 class SC2LotVLocation(Location):

@@ -931,8 +931,8 @@ def is_mod_installed_correctly() -> bool:
     if "SC2PATH" not in os.environ:
         check_game_install_path()
 
-    mapdir = os.environ['SC2PATH'] / Path('Maps/ArchipelagoCampaignHotS')
-    modfile = os.environ["SC2PATH"] / Path("Mods/ArchipelagoHotS.SC2Mod")
+    mapdir = os.environ['SC2PATH'] / Path('Maps/ArchipelagoCampaignLotV')
+    modfile = os.environ["SC2PATH"] / Path("Mods/ArchipelagoLotV.SC2Mod")
     lotv_required_maps = [
         "ap_voidprologude01.SC2Map", "ap_voidprologue02.SC2Map", "ap_voidprologue03.SC2Map"
         "ap_paiur01.SC2Map", "ap_paiur02.SC2Map", "ap_paiur03.SC2Map",
