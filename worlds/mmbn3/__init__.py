@@ -1,5 +1,4 @@
 import os
-import settings
 import typing
 import threading
 
@@ -15,17 +14,6 @@ from .Options import MMBN3Options
 from .Regions import regions, RegionName
 from .Names.ItemName import ItemName
 from .Names.LocationName import LocationName
-
-
-class MMBN3Settings(settings.Group):
-    class RomFile(settings.UserFilePath):
-        """File name of the MMBN3 Blue US rom"""
-        copy_to = "Mega Man Battle Network 3 - Blue Version (USA).gba"
-        description = "MMBN3 ROM File"
-        md5s = [MMBN3DeltaPatch.hash]
-
-    rom_file: RomFile = RomFile(RomFile.copy_to)
-    rom_start: bool = True
 
 
 class MMBN3Web(WebWorld):
@@ -51,7 +39,6 @@ class MMBN3World(World):
     """
     game = "MegaMan Battle Network 3"
     option_definitions = MMBN3Options
-    settings: typing.ClassVar[MMBN3Settings]
     topology_present = False
 
     data_version = 1
